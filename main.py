@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 #import seaborn as sns
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from datetime import datetime
 import time
 
@@ -27,7 +27,7 @@ top_manufacturers=df1.sort_values('Value').tail(5)['Manufacturer'].unique()
 sales = res.groupby(['Manufacturer', 'Date'], as_index=False)['Value'].sum()
 
 st.subheader('Top 5 manufacturers')
-plt.figure(figsize=(10, 6))
+#plt.figure(figsize=(10, 6))
 for i in top_manufacturers:
     manufacturer_data = sales[sales['Manufacturer'] == i]
     st.markdown(i)
