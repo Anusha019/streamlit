@@ -24,17 +24,17 @@ st.dataframe(df1)
 top_manufacturers=df1.sort_values('Value').tail(5)['Manufacturer'].unique()
 
 # Group the data by manufacturer and date to calculate the total sales over time
-# sales = res.groupby(['Manufacturer', 'Date'], as_index=False)['Value'].sum()
+sales = res.groupby(['Manufacturer', 'Date'], as_index=False)['Value'].sum()
 
-# st.subheader('Top 5 manufacturers')
-# #plt.figure(figsize=(10, 6))
-# for i in top_manufacturers:
-#     manufacturer_data = sales[sales['Manufacturer'] == i]
-#     plt.plot(manufacturer_data['Date'], manufacturer_data['Value'], label=i)
+st.subheader('Top 5 manufacturers')
+plt.figure(figsize=(10, 6))
+for i in top_manufacturers:
+    manufacturer_data = sales[sales['Manufacturer'] == i]
+    plt.plot(manufacturer_data['Date'], manufacturer_data['Value'])
 
-# plt.xlabel('Date')
-# plt.ylabel('Sales')
-# plt.title('Sales Trends for Top 5 Manufacturers')
-# st.pyplot(plt)
+plt.xlabel('Date')
+plt.ylabel('Sales')
+plt.title('Sales Trends for Top 5 Manufacturers')
+st.pyplot(plt)
 
-# st.sidebar.image('logo.png')
+st.sidebar.image('logo.png')
