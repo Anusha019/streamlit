@@ -48,3 +48,4 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.sidebar.image('logo.png',use_column_width=True)
+st.sidebar.markdown("---")
