@@ -34,18 +34,5 @@ plt.ylabel('Sales')
 plt.title('Sales Trends for Top 5 Manufacturers')
 st.pyplot(plt)
 
-st.markdown("""
-<style>
-.css-nqowgj.e1ewe7hr3
-{
-    visibility: hidden;
-}
-.css-h5rgaw.e1g8pov61
-{
-    visibility: hidden;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.sidebar.image('logo.png',width=1,use_column_width=True)
+st.sidebar.image('logo.png',width=0.5,use_column_width=True)
 st.sidebar.markdown("---")
