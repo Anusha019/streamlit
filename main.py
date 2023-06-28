@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
-#import seaborn as sns
-#import matplotlib as plt
-from datetime import datetime
-import time
+import matplotlib.pyplot as plt
 
 st.title("Sales Analyzer")
 
