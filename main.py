@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 #import seaborn as sns
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 from datetime import datetime
 import time
 
@@ -30,7 +30,11 @@ st.subheader('Top 5 manufacturers')
 #plt.figure(figsize=(10, 6))
 for i in top_manufacturers:
     manufacturer_data = sales[sales['Manufacturer'] == i]
-    st.markdown(i)
-    st.line_chart(manufacturer_data,x='Date',y='Value')
+    plt.plot(manufacturer_data['Date'], manufacturer_data['Value'], label=i)
+
+plt.xlabel('Date')
+plt.ylabel('Sales')
+plt.title('Sales Trends for Top 5 Manufacturers')
+st.pyplot(plt)
 
 st.sidebar.image('logo.png')
