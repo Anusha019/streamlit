@@ -27,7 +27,7 @@ st.subheader('Top 5 manufacturers')
 plt.figure(figsize=(10, 6))
 for i in top_manufacturers:
     manufacturer_data = sales[sales['Manufacturer'] == i]
-    plt.plot(manufacturer_data['Date'], manufacturer_data['Value'])
+    plt.plot(manufacturer_data['Date'], manufacturer_data['Value'],label=i)
 
 plt.xlabel('Date')
 plt.ylabel('Sales')
